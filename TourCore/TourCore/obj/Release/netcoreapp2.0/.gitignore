@@ -1,0 +1,5 @@
+*.dll
+*.pdb
+*.cache
+*.csproj.FileListAbsolute.txt
+*.aspnetcore.mvc.razor.viewcompilation.rsp

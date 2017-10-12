@@ -4,9 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.DotNet.PlatformAbstractions;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 
 namespace TourCore.Controllers
 {
+    [Authorize("Permission")]
+    [EnableCors("MyDomain")]
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {

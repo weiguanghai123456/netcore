@@ -12,6 +12,9 @@ namespace TourCore.JsonDef
         public string enable;
         public string createTime;
         public string updateTime;
+        public string role;
+        public string authorization;
+        
        
     }
 }

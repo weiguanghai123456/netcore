@@ -25,7 +25,7 @@ namespace TourCore.Helpers
         /// <param name="pwd">密码</param>
         /// <returns>true 表示存在  false 表示不存在</returns>
         public bool CheckUser(string name, string pwd, out User user)
-        {
+        { 
             user = new User();
             SqliteParameter[] parameters = new SqliteParameter[] { new SqliteParameter("@name", name), new SqliteParameter("@pwd", pwd) };
             string sql = "SELECT * FROM users WHERE name=@name AND pwd=@pwd";
@@ -268,6 +268,38 @@ namespace TourCore.Helpers
             }
         }
 
+        //public bool InsertNew(New @new)
+        //{
+        //    string tableName = "news";
+        //    using (SqliteConnection conn = new SqliteConnection(connStr))
+        //    {
+        //        conn.Open();
+        //        string sql = string.Format("insert into {0} (id,title,content,type,photo,createTime,updateTime) values({1},{2},{3},{4},{5},{6},{7})", tableName
+        //            , @new.id
+        //            , @new.title
+        //            , @new.content
+        //            , @new.type
+        //            , @new.photo
+        //            , @new.createTime
+        //            , @new.updateTime);
+        //        //SqliteParameter[] parameters = new SqliteParameter[] {
+        //        //    new SqliteParameter("@id", @new.id),
+        //        //    new SqliteParameter("@title", @new.title),
+        //        //    new SqliteParameter("@content", @new.content),
+        //        //    new SqliteParameter("@type", @new.type),
+        //        //    new SqliteParameter("@photo", @new.photo),
+        //        //    new SqliteParameter("@createTime", @new.createTime),
+        //        //    new SqliteParameter("@updateTime", @new.updateTime)
+        //        //};
+        //        SqliteCommand commd = conn.CreateCommand();
+        //        //commd.Parameters.AddRange(parameters);
+        //        commd.CommandType = CommandType.Text;
+        //        commd.CommandText = sql;
+        //        int ret = commd.ExecuteNonQuery();
+        //        return ret > 0;
+        //    }
+        //}
+        // back
         public bool InsertNew(New @new)
         {
             string tableName = "news";

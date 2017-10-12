@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TourCore.Helpers;
 using TourCore.JsonDef;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -51,6 +53,8 @@ namespace TourCore.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [Authorize("Permission")]
+        [EnableCors("MyDomain")]
         public JsonResult Delete(string id)
         {
             ResponseResult result = new ResponseResult();
@@ -79,6 +83,8 @@ namespace TourCore.Controllers
         /// <param name="type"></param>
         /// <param name="createTime"></param>
         /// <returns></returns>
+        [Authorize("Permission")]
+        [EnableCors("MyDomain")]
         public JsonResult Insert(string title, string content, string photo, string type)
         {
             ResponseResult result = new ResponseResult();
@@ -114,6 +120,8 @@ namespace TourCore.Controllers
         /// <param name="type"></param>
         /// <param name="updateTime"></param>
         /// <returns></returns>
+        [Authorize("Permission")]
+        [EnableCors("MyDomain")]
         public JsonResult Update(string id, string title, string content, string photo, string type)
         {
             ResponseResult result = new ResponseResult();

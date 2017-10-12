@@ -10,7 +10,7 @@ namespace TourCore.Helpers
         public static string Check(string str)
         {
             if (str == null)
-                return string.Empty;
+                return "";
             return str;
         }
     }

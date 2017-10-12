@@ -1,0 +1,6 @@
+*.JWT.AssemblyInfoInputs.cache
+*.JWT.csproj.CoreCompileInputs.cache
+*.JWT.csproj.FileListAbsolute.txt
+*.JWT.csprojResolveAssemblyReference.cache
+*.dll
+*.pdb

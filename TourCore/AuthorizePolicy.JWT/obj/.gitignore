@@ -1,0 +1,3 @@
+*.JWT.csproj.nuget.cache
+*.JWT.csproj.nuget.g.props
+*.JWT.csproj.nuget.g.targets
